@@ -8,24 +8,27 @@ function addOrder() {
   let order = document.getElementById("order").value;
   
   // أنشئ كائن newOrder
-  let newOrder = {
-    name,
-    id,
-    phone,
-    order,
-  }
+  let newOrder = [
+
+    {name,id,phone,order},
+  ]
 
 
   // أدرج الكائن إلى المصفوفة
-  newOrder.push()
+  newOrder.push( addOrder)
   // طبق الخطوة 7 تحت هذا الكومنت
   load ()
 }
 
-function load() {
+function load(addOrder) {
   let container = document.getElementById("container");
   container.innerHTML = "";
   // طبّق الخطوة 6 تحت هذا الكومنت
-  `<div><h1>${item.name} - ${item.id}</h1><h3>${item.order}</h3></div>`
-  
+  orders.forEach(item =>{
+
+    container.innerHTML+=    `<div><h1>${item.name} - ${item.id}</h1><h3>${item.order}</h3></div>`
+  }
+
+
+  );
 }
